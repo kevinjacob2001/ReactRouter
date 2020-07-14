@@ -1,31 +1,37 @@
-import React from 'react';
-import Nav from './Nav';
-import About from './About';
-import Shop from './Shop';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <Router>
+import Card from './Components/Card'
+
+
+class App extends Component{
+
+ state={
+    name:"Jephin John"
+
+}
+
+handleChange=()=>{
+  this.setState({name:"football"})
+}
+
+componentDidMount(){
+  console.log("mounded")
+}
+componentWillUpdate(){
+  console.log("updated")
+}
+
+  render(){
+    return(
       <div>
-
-        <Nav />
-        <Switch>
-        <Route exact path="/" component={Home}/>
-        <Route exact path="/about" component={About}/>
-        <Route path="/shop" component={Shop}/>
-        </Switch>
+<button onClick={this.handleChange}>CLICK ME</button>
+        <Card name={this.state.name}/>
+   
 
       </div>
-    </Router>
-  );
+    )
+  }
 }
-const Home=()=>(
-  <div>
-    <h1>Home pages</h1>
-  </div>
-);
-
 
 
 export default App;
