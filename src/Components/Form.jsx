@@ -10,7 +10,7 @@ class Form extends Component{
   }
 
   
-    handleChnage=(e)=>{
+    handleChange=(e)=>{
 
 this.setState({[e.target.name]:e.target.value})
 
@@ -28,8 +28,8 @@ console.log(this.state)
         return(
 <form onSubmit={this.finalSubmit}>
 
-<input type="text" name="first"  onChange={this.handleChnage}/>
-<input type="text" second="second"onChange={this.handleChnage}/>
+<input type="text" name="first"  onChange={this.handleChange}/>
+<input type="text" second="second"onChange={this.handleChange}/>
 
 <button >
     click mee
