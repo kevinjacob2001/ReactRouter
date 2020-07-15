@@ -6,19 +6,21 @@ class Form extends Component{
   state={
       first:"",
       second:""
+  
   }
 
   
     handleChnage=(e)=>{
 
-this.setState({first:e.target.value})
-this.setState({second:e.target.value})
+this.setState({[e.target.name]:e.target.value})
+
 }
 
-finalSubmit=(e)=>{
-e.preventDefault();
-    this.setState({final:this.state.value})
 
+
+finalSubmit=(e)=>{
+    e.preventDefault();
+console.log(this.state)
 }
    
    
@@ -26,8 +28,8 @@ e.preventDefault();
         return(
 <form onSubmit={this.finalSubmit}>
 
-<input type="text" value={this.state.first} onChange={this.handleChnage}/>
-<input type="text" value={this.state.second} onChange={this.handleChnage}/>
+<input type="text" name="first"  onChange={this.handleChnage}/>
+<input type="text" second="second"onChange={this.handleChnage}/>
 
 <button >
     click mee
