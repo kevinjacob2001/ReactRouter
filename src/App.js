@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Counter from './Components/Counter'
+import Form from './Components/Form';
 
 import './App.css';
 
@@ -10,7 +11,8 @@ class App extends Component{
     return(
       <div className="App">
         Events
-        <Counter/>
+         {/* <Counter/>  */}
+        <Form/>
       </div>
     )
   }
